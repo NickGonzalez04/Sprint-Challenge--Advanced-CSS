@@ -20,6 +20,7 @@
   .btn {
     align-items: center;
     justify-content: center;
+    width: 94%;
   }
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -202,7 +203,8 @@ p {
 }
 @media (max-width: 500px) {
   .header-nav a {
-    display: inline;
+    width: 100%;
+    padding: 0;
   }
 }
 .header-nav h1 {
@@ -225,7 +227,15 @@ footer {
   align-items: center;
 }
 .home .main-img {
+  width: auto;
   border-radius: 8px;
+}
+@media (max-width: 500px) {
+  .home .main-img {
+    width: 97%;
+    height: auto;
+    margin: 0;
+  }
 }
 .home .intro h2 {
   padding: 15px;
@@ -242,6 +252,11 @@ footer {
   .home .space-images .sky,
   .home .space-images .launch {
     display: none;
+  }
+}
+@media (max-width: 500px) and (max-width: 500px) {
+  .home .space-images .blast {
+    width: 94%;
   }
 }
 .home img {
@@ -268,21 +283,11 @@ footer {
 }
 @media (max-width: 500px) {
   .home .walk {
-    margin: 0;
-    display: flex;
     flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
   }
 }
 .home .walk .walk-text {
   width: 50%;
-}
-@media (max-width: 500px) {
-  .home .walk .walk-text {
-    width: 98%;
-    margin: 0;
-  }
 }
 .home .walk .walk-text h3 {
   margin-bottom: 10px;
@@ -290,11 +295,16 @@ footer {
 .home .walk .walk-text p {
   margin-bottom: 26px;
 }
-.home .walk .walk-text .walk-img {
-  width: 46%;
+.home .walk .walk-img {
+  width: 48%;
   margin-left: 4%;
 }
-.home .walk .walk-text img {
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    width: 94%;
+  }
+}
+.home .walk img {
   width: 100%;
   height: auto;
   border-radius: 10px;
