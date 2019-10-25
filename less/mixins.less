@@ -1,1 +1,52 @@
 // Mixins Here
+// Navigation Mixin
+        .center() {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+ 
+
+//Parametic Mixin
+.custom-button(@bg-color, @width:200px, @font:#000){
+    display: flex;
+    background-color: @bg-color;
+    margin: 0 2px 20px;
+    cursor: pointer;
+    width: @width;
+    height: 45px;
+    font-size: 2rem;
+    border-radius: 10px;
+    color:@font;
+
+
+    &:hover{
+        background-color:@font;
+        color:@bg-color; 
+        border: 1px solid @btn-bg-color;
+    }
+}
+
+
+
+.background()
+{ width: 100%;
+    padding: 2rem;
+    background: #f4f4f4;}
+
+
+// Sign up button
+.btn{
+    .custom-button(@btn-bg-color, @width:200px, @font:white);
+    align-items: center;
+    justify-content: center;
+
+    @media @phone{
+        align-items: center;
+        justify-content: center;
+        width: 98%;
+    }
+
+
+}
